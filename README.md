@@ -23,7 +23,7 @@ Once you've download the Docker image, we can run it via:
 
 ```
 # 2
-docker run --volume $(pwd):/data -it blr-presentation:latest /bin/bash
+docker run --volume $(pwd):/data -it 571f6261f338 /bin/bash
 ```
 
 This will mount the local directory `$(pwd)` on your own machine, to the `/data` directory within the Docker container. In other words, any files you create in `/data` will also be accessible locally.
