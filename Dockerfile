@@ -1,4 +1,4 @@
-FROM geodata/gdal:2.1.2
+FROM ubuntu:14.04
 
 USER root
 WORKDIR /tmp
@@ -22,6 +22,7 @@ RUN wget https://bootstrap.pypa.io/get-pip.py \
     && . /tmp/venv/bin/activate \
     && pip install numpy \
     && pip install -U \
+        fiona \
         rasterio \
         rio-color \
         rio-cloudmask \
