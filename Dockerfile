@@ -12,7 +12,8 @@ RUN apt-get update -qq && \
         libgdal-dev \
         libatlas-base-dev \
         gfortran \
-        libfreetype6-dev
+        libfreetype6-dev \
+        jq
 
 RUN wget https://bootstrap.pypa.io/get-pip.py \
     && python get-pip.py \
@@ -23,6 +24,7 @@ RUN wget https://bootstrap.pypa.io/get-pip.py \
     && pip install -U \
         rasterio \
         rio-color \
+        rio-cloudmask \
         rio-hist \
         rio-toa \
         landsat-util
